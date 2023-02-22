@@ -1,0 +1,70 @@
+/*.novedades-canciones, .novedades-albumes {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    margin-left: 7%;
+}
+
+.novedades-albumes {
+    margin-bottom: 10%;
+}*/
+
+.register {
+    float: right;
+    padding: 8px;
+    position: relative;
+    top: 30%;
+    right: 2%;
+    cursor: pointer;
+}
+
+footer {
+    font-size: x-large;
+    position: fixed;
+    bottom: 6%;
+    left: 40%;
+    height: 2.5vh;
+    width: 100%;
+    z-index: 3;
+}
+
+.ad {
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    /*.novedades-albumes {
+        margin-bottom: 30%;
+    }*/
+
+    footer{
+        left: 30%;
+        bottom: 5%;
+    }
+}
+
+/* Smartphone */
+
+@media (max-width: 480px) {
+    .register {
+        top: 25%;
+        right: 2%;
+        font-size: small;
+    }
+
+    /*.novedades-albumes {
+        margin-bottom: 40%;
+    }*/
+
+    .ad {
+        position: relative;
+        font-size: medium;
+        right: 50px;
+    }
+}

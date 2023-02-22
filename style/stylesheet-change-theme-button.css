@@ -1,0 +1,155 @@
+/* switch that changes theme from dark to light*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {opacity: 0;}
+
+.sliding-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: 0;
+    background-color: rgb(134, 140, 133);
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.sliding-button #circle {
+    position: absolute;
+    background-color: white;
+    content: "";
+    height: 20px;
+    width: 20px;
+    bottom: 5px;
+    left: 5px;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+input:checked + .sliding-button {background-color: rgb(78, 218, 39);}
+
+input:checked + .sliding-button #circle {
+    background-color: black;
+}
+
+/*pop-up*/
+.change-theme-popup {
+    display: none;
+    position: fixed;
+    border-radius: 6px;
+    left: 2%;
+    top: 60%;
+    width: 12%;
+    height: 10%;
+    z-index: 3;
+}
+.container-light {
+    position: relative;
+    border-radius: 6px;
+    left: 3%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.container-light:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.light-theme-text {
+    position: relative; 
+    left: 10%;
+    top: 5px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.switch, .light-theme-text {display: inline-block;}
+
+.show-popup-theme {
+    display: block;
+    animation: aparecer 0.5s;
+}
+  
+@keyframes aparecer {
+    from {opacity: 0;} to {opacity:1;}
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .switch {
+        width: 65%;
+        height: 30px;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .light-theme-text {
+        left: 5%;
+        font-size: medium;
+    }
+
+    .change-theme-popup {
+        top: 44vh;
+        width: 12%;
+        height: 7vh;
+    }
+
+    .light-theme-text {
+        top: 0;
+        font-size: large;
+        font-weight: bold;
+    }
+}
+
+/* Smartphone */
+
+@media (max-width: 480px) {
+    .switch {
+        width: 80%;
+        height: 20px;
+        left: 0;
+        bottom: 38%;
+    }
+
+    .sliding-button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 10px;
+        right: 0;
+    }
+    
+    .sliding-button #circle {
+        height: 15px;
+        width: 15px;
+        bottom: 3px;
+        left: 3px;
+    }
+
+    .change-theme-popup {
+        top: 50vh;
+        left: 2%;
+        width: 15%;
+        height: 40px;
+    }
+
+    .switch, .light-theme-text {display: block;}
+
+    .light-theme-text {
+        position: absolute;
+        font-size: xx-small;
+        left: 5px;
+        top: 27px;
+    }
+}

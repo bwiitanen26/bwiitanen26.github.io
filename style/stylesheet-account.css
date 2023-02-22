@@ -1,0 +1,83 @@
+h2 {
+    color: white;
+    padding: 2%;
+}
+
+h3 {
+    color: white;
+    position: relative;
+    padding: 2%;
+    left: 17%;
+}
+
+.data {
+    position: relative;
+    width: 95%;
+    background-color: black;
+    border-radius: 6px;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+#pswd, #name, #surname, #useremail, #userpicture {
+    position: relative;
+    left: 2%;
+    margin-bottom: 2%;
+    padding: 1%;
+    border-radius: 5px;
+    width: 90%;
+}
+
+#userpicture {
+    display: none;
+}
+
+#user-profile-picture {
+    position: relative;
+    border-radius: 50%;
+    left: 2%;
+    top: 15%;
+    width: 150px;
+    height: 150px;
+}
+
+#user-profile-picture:hover {
+    transform: scale(1.02);
+}
+
+#send-values {
+    position: relative;
+    margin-bottom: 5%;
+    width: 20%; 
+    height: 50px;
+    left: 40%;
+    color:white;
+    background-color:rgb(20, 145, 241);
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .data {
+        margin-top: 5%;
+        margin-bottom: 30%;
+    }
+}
+
+/* Smartphone */
+
+@media (max-width: 480px) {
+    .data {
+        margin-top: 2%;
+        margin-bottom: 40%;
+    }
+
+    #send-values, #reset-values {
+        width: 30%; 
+        height: 30px;
+        left: 20%;
+        margin-top: 10%;
+    }
+}
